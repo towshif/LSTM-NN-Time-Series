@@ -8,8 +8,8 @@ from sklearn import preprocessing, cross_validation, svm
 
 import matplotlib.pyplot as plt
 
-
-df = quandl.get("WIKI/MSFT", start_date="2017-01-01", end_date="2017-04-01")
+# df = quandl.get("WIKI/MSFT", start_date="2017-01-01", end_date="2017-04-01")
+df = quandl.get("WIKI/TSLA", start_date="2018-03-01", end_date="2018-06-29")
 
 df = df[['Adj. Close']]
 df1 = df
@@ -41,8 +41,8 @@ print("confidence: ", confidence)
 forecast_prediction = clf.predict(X_forecast)
 print(forecast_prediction)
 
-
-df2 = quandl.get("WIKI/MSFT", start_date="2017-04-02", end_date="2017-06-01")
+df2 = quandl.get("WIKI/TSLA")
+# , start_date="2017-04-02", end_date="2017-06-01")
 df2.plot()
 # forecast_prediction.plot();
 plt.show()
